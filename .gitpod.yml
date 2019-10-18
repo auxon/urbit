@@ -1,2 +1,7 @@
 image:
   file:  .gitpod.dockerfile
+  ports:
+    - port: 80
+tasks:
+    - command: make build
+    - command: make test
