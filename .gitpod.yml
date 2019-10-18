@@ -3,5 +3,9 @@ image:
   ports:
     - port: 80
 tasks:
+    - command: mkdir -m 0755 /nix
+    - command: chown gitpod /nix
+    - command: curl https://nixos.org/nix/install | sh
     - command: make build
     - command: make test
+    
